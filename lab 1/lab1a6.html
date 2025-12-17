@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+<body>
+    <script>
+        n=parseInt(prompt("Enter size of series"))
+        n1=n
+        n2=n
+        ans=0
+        count=0
+        while(n!=0){
+            rem=n%10
+            count++
+            n=Math.floor(n/10)
+        }
+        while(n1!=0){
+            rem1=n1%10
+            ans+=Math.pow(rem1,count)
+            n1=Math.floor(n1/10)
+        }
+        if(n2==ans){
+            document.write(n2+" is armstrong number")
+        }
+        else{
+            document.write(n2+" is not armstrong number")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 1b13</title>
+</head>
+<body>
+    <script>
+        let string = prompt("Enter a string");
+        let fromEnd = -1, fromStart = -1;
+        
+        for(let i = 0 ; i <= string.length & !(fromEnd != -1 & fromStart != -1) ; i++) {
+            ch1 = string[i].toLowerCase();
+
+            if (ch1 === "a" || ch1 === "e" || ch1 === "i" || ch1 === "o" || ch1 === "u") {
+                fromStart = i;
+            }
+
+            ch2 = string[(string.length)-i-1].toLowerCase();
+
+            if (ch2 === "a" || ch2 === "e" || ch2 === "i" || ch2 === "o" || ch2 === "u") {
+                fromEnd = ((string.length)-i-1);
+            }
+        }
+
+        alert(string.slice((fromStart+1),fromEnd));
+
+    </script>
+</body>
+</html>

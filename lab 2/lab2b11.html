@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 2b11</title>
+</head>
+<body>
+    <label><input type="checkbox" value="101" class="roll_no">101</label><br>    
+    <label><input type="checkbox" value="102" class="roll_no">102</label><br> 
+    <label><input type="checkbox" value="103" class="roll_no">103</label><br>
+    <label><input type="checkbox" value="104" class="roll_no">104</label><br>
+    <label><input type="checkbox" value="105" class="roll_no">105</label><br>  
+    <label><input type="checkbox" value="106" class="roll_no">106</label><br>
+    <label><input type="checkbox" value="107" class="roll_no">107</label><br>  
+
+    <h1>Selected roll number is : </h1>
+    <p id="ans"></p>
+    <script>
+       const ans=document.getElementById("ans")
+       const checkbox=document.getElementsByClassName("roll_no")
+       for(i=0;i<checkbox.length;i++){
+            checkbox[i].addEventListener("change",()=>{
+                    let check=[]
+                    for(j=0;j<checkbox.length;j++){
+                        if(checkbox[j].checked){
+                            check.push(checkbox[j].value)
+                        }
+                    }
+                    ans.innerHTML=check.join(",")
+           }) 
+       }
+       
+    </script>
+</body>
+</html>

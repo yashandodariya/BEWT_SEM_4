@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 1a12</title>
+</head>
+<body>
+    <script>
+        let num=parseInt(prompt("Enter number(1 to 999)"))
+        function numToword(num){
+            ones=["zero","one","two","three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
+            tens=["","", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+            if(num<20){
+                return ones[num]
+            }
+            if(num<100){
+                let i=Math.floor(num/10)
+                let j=num%10;
+                return tens[i] + (j!==0 ? " "+ones[j] :" ")
+            }
+            if(num<1000){
+                let a=Math.floor(num/100)
+                let b=num%100;
+                if(b===0){
+                    return ones[a] + " hundered "
+                }
+                else{
+                    return ones[a] + " hundered and " + numToword(b)
+                }
+                
+            }
+        }
+        document.write(numToword(num))
+    </script>
+</body>
+</html>

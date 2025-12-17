@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 2b10</title>
+</head>
+<body>
+    <h1 id="Events"></h1>
+    <script>
+        ref=document.getElementById("Events")
+        document.addEventListener("mousedown",(e)=>{
+            if(e.button==0){
+                ref.innerHTML="Left Click"
+            }
+            if(e.button==2){
+                 ref.innerHTML="Right Click"
+            }
+            if(e.button==1){
+                 ref.innerHTML="Middle Click"
+            }
+        })
+        
+    </script>
+</body>
+</html>
