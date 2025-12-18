@@ -1,0 +1,4 @@
+package.json is main part of our project.
+ with the help of package.json file we can get information about locally install package and that version
+ we  can also find main file of our project and other details of our project
+package.json contain our install package but package-lock.json contain our install package and their dependency

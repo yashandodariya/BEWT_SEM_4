@@ -1,0 +1,8 @@
+git upload step
+
+git init
+git add .
+git commit -m "First commit"
+git remote add origin "link here"
+git branch -m main
+git push -u origin main
